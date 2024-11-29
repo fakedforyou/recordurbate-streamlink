@@ -1,6 +1,9 @@
-# This is a work in progress - standby
+# this is a work in progress - standby
 
-# recordurbate-streamlink Introduction:
+
+
+
+# recordurbate-streamlink with docker introduction:
 Files and instructions to build a recordurbate-streamlink image used to deploy it in docker
 
 This project is based on https://github.com/weigeloveu/Recordurbate-streamlink and uses files from https://github.com/streamlink/streamlink. And so thank you @weigeloveu and @streamlink for your awesome content.
@@ -12,8 +15,9 @@ The intention here is to enable you to build a docker image that will capture fr
 
 
 > [!NOTE]
-> In the same instructions below all content is done completely off of root \/ . This is not typically advised and is better under opt, home, or some other place. Please adjust the directories used as you see fit for your system.
-> 
+> In the sample instructions below all content is done completely off of root \/ . This is not typically advised and is better under opt, home, or some other place. Please adjust the directories used as you see fit for your system.
+
+
 # how to build the docker image:
 First we make a directory, move into it, get this git content, move into that, and then build the image.
 ```
@@ -45,13 +49,18 @@ recordurbate-streamlink:latest
 ```
 
 # how to add or remove models:
+Models are identified in the config.json file within the configs directory in your /rbs-config directory. To add or remove models it is easiest to just modify the JSON file. You can also add models by attaching to the container and running the familiar recordurbate add command. But the file is faster and actually easier as long as you maintain the spacing and syntax. This file is periodically read and so there is no need to restart the container for the changes to take effect. 
+```
 cd /rbs-config/configs
+```
 
+Edit the file with nano, vi, xed, or whatever you like.
+```
 nano ./config.json
+```
 
-modify the file so that it is similar to this using the model names:
-
-**********************
+Modify the file so that it is similar to this using the model names:
+```
 {\
     "auto_reload_config": true,\
     "rate_limit": true,\
@@ -63,12 +72,12 @@ modify the file so that it is similar to this using the model names:
         "model-3"\
     ]\
 }
+```
 
-*********************
-
-An example with proper spacing for JSON is in the extras folder.
+An example with proper spacing for JSON is in the extras folder. Note that the last model does not have a comma after the quote. I try to add them alphabetically.
 
 # how to change download quality:
-
+coming soon!
 
 # general usage suggestions:
+coming soon!
