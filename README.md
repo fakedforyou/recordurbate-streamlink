@@ -14,7 +14,7 @@ The intention here is to enable you to build a docker image that will capture fr
 
 
 # how to build the docker image:
-First of all the assumption is you have docker and docker-compose installed and functional on your system. Once you have this done make a directory, move into it, get this git content, move into that, and then build the image as per below:
+First of all the assumption is you have docker installed and functional on your system. Once you have this done make a directory, move into it, get this git content, move into that, and then build the image as per below:
 ```
 mkdir -p /recordurbate-streamlink-build
 cd /recordurbate-streamlink-build
@@ -23,6 +23,14 @@ cd recordurbate-streamlink
 docker build -t recordurbate-streamlink:latest .
 ```
 (don't forget the trailing dot)
+
+This build process can take a while as the image is almost 2GB. Perhaps I could have pruned it down but thats for another time. Once the image is made you can verify it by typing this from your bash prompt:
+```
+docker image ls
+REPOSITORY                                      TAG       IMAGE ID       CREATED        SIZE
+recordurbate-streamlink                         latest    rb953335e273   32 hours ago   1.87GB
+```
+Note the 1.87GB size and that the image is there!
 
 # how to deploy a container using the image:
 Make some directories used for the configuration files and to hold the videos.
