@@ -33,7 +33,26 @@ docker run -d \\ \
 recordurbate-streamlink:latest
 
 # how to add or remove models:
+cd /rbs-config/configs
 
+nano ./config.json
+
+modify the file so that it is similar to this using the model names:
+
+**********************
+{
+    "auto_reload_config": true,
+    "rate_limit": true,
+    "rate_limit_time": 5,
+    "default_export_location": "./list.txt",
+    "streamers": [
+        "model-1",
+        "model-2",
+        "model-3"
+    ]
+}
+
+*********************
 
 # how to change download quality:
 
