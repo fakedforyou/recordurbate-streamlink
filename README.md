@@ -3,22 +3,21 @@
 # recordurbate-streamlink Introduction:
 Files and instructions to build a recordurbate-streamlink image used to deploy it in docker
 
-This project is based on https://github.com/weigeloveu/Recordurbate-streamlink and uses files from https://github.com/streamlink/streamlink. The intention is to enable you to build a docker image that will capture free streamed content from Chaturbate models for offline viewing in accord with their published authorization. 
+This project is based on https://github.com/weigeloveu/Recordurbate-streamlink and uses files from https://github.com/streamlink/streamlink. And so thank you @weigeloveu and @streamlink for your awesome content.
+
+The intention here is to enable you to build a docker image that will capture free streamed content from Chaturbate models for offline viewing in accord with their published authorization. 
 
 > [!CAUTION]
 > Using this to capture models who do not approve or who have copyright expressed for their streaming content is forbidden and not intended by this project. DO NOT DOWNLOAD these models.
 
 # how to build the docker image:
+```
 mkdir -p /recordurbate-streamlink-build
-
 cd /recordurbate-streamlink-build
-
 git clone https://github.com/fakedforyou/recordurbate-streamlink.git
-
 cd recordurbate-streamlink
-
 docker build -t recordurbate-streamlink:latest .
-
+```
 (don't forget the trailing dot)
 
 # how to deploy a container using the image:
