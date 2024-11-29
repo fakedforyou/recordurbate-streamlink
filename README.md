@@ -19,7 +19,7 @@ The intention here is to enable you to build a docker image that will capture fr
 
 
 # how to build the docker image:
-First we make a directory, move into it, get this git content, move into that, and then build the image.
+First of all the assumption is you have docker and docker-compose installed and functional on your system. Once you have this done make a directory, move into it, get this git content, move into that, and then build the image as per below:
 ```
 mkdir -p /recordurbate-streamlink-build
 cd /recordurbate-streamlink-build
