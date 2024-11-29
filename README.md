@@ -7,6 +7,7 @@ This project is based on https://github.com/weigeloveu/Recordurbate-streamlink a
 
 # how to build the docker image:
 *mkdir -p /recordurbate-streamlink-build
+
 *cd /recordurbate-streamlink-build
 *git clone https://github.com/fakedforyou/recordurbate-streamlink.git
 *cd recordurbate-streamlink
