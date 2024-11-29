@@ -85,7 +85,7 @@ By default the recording is done at 480p and as an MP4. You can view videos as t
 "480p,720p,best",
 ```
 
-To change the resolution just modify this like to something else. Some examples are:
+To change the resolution just modify this line to something else. Some examples are:
 ```
 "1080p,720p,best",
 or
