@@ -6,7 +6,7 @@ This project is based on https://github.com/weigeloveu/Recordurbate-streamlink a
 The intention here is to enable you to build a docker image that will capture free streamed content from Chaturbate models for offline viewing in accord with their published authorization. 
 
 > [!CAUTION]
-> Using this to capture models who do not approve or who have copyright expressed for their streaming content is forbidden and not intended by this project. DO NOT DOWNLOAD these models.
+> Using this to capture models who do not approve or who have copyright expressed for their streaming content is forbidden and not intended by this project. DO NOT DOWNLOAD these models. While it will work for all except private streams it is not endorsed nor recommended. 
 
 
 > [!NOTE]
