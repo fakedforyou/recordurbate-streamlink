@@ -5,13 +5,11 @@ This project is based on https://github.com/weigeloveu/Recordurbate-streamlink a
 
 The intention here is to enable you to build a docker image that will capture free streamed content from Chaturbate models for offline viewing in accord with their published authorization. 
 
-> [!CAUTION]
-> Using this to capture models who do not approve or who have copyright expressed for their streaming content is forbidden and not intended by this project. DO NOT DOWNLOAD these models. While it will work for all except private show in progress streams it is not endorsed nor recommended. 
-
-
 > [!NOTE]
 > In the sample instructions below all content is done completely off of root \/ . This is not typically advised and is better under opt, home, or some other place. Please adjust the directories used as you see fit for your system.
 
+> [!CAUTION]
+> Using this to capture models who do not approve or who have copyright expressed for their streaming content is forbidden and not intended by this project. DO NOT DOWNLOAD these models. While it will work for all except private show in progress streams it is not endorsed nor recommended. 
 
 # how to build the docker image:
 First of all the assumption is you have docker installed and functional on your system. Once you have this done make a directory, move into it, get this git content, move into that, and then build the image as per below:
