@@ -56,16 +56,16 @@ nano ./config.json
 
 Modify the file so that it is similar to this using the model names:
 ```
-{\
-    "auto_reload_config": true,\
-    "rate_limit": true,\
-    "rate_limit_time": 5,\
-    "default_export_location": "./list.txt",\
-    "streamers": [\
-        "firstmodel",\
-        "secondmodel",\
-        "thirdmodel"\
-    ]\
+{
+    "auto_reload_config": true,
+    "rate_limit": true,
+    "rate_limit_time": 5,
+    "default_export_location": "./list.txt",
+    "streamers": [
+        "firstmodel",
+        "secondmodel",
+        "thirdmodel"
+    ]
 }
 ```
 
