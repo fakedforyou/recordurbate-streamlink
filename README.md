@@ -1,8 +1,3 @@
-# this is a work in progress - standby
-
-
-
-
 # recordurbate-streamlink with docker introduction:
 Files and instructions to build a recordurbate-streamlink image used to deploy it in docker
 
