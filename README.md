@@ -19,6 +19,10 @@ docker build -t recordurbate-streamlink:latest .
 (don't forget the trailing dot)
 
 # how to deploy a container using the image:
+mkdir -p /rbs-config
+
+mkdir -p /rbs-videos
+
 
 
 # how to add or remove models:
