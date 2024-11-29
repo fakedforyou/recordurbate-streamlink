@@ -11,9 +11,12 @@ mkdir -p /recordurbate-streamlink-build
 cd /recordurbate-streamlink-build
 
 git clone https://github.com/fakedforyou/recordurbate-streamlink.git
+
 cd recordurbate-streamlink
 
 docker build -t recordurbate-streamlink:latest .
+
+(don't forget the trailing dot)
 
 # how to deploy a container using the image:
 
