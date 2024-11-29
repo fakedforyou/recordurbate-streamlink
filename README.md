@@ -67,16 +67,14 @@ Modify the file so that it is similar to this using the model names:
     "rate_limit_time": 5,\
     "default_export_location": "./list.txt",\
     "streamers": [\
-        "model-1",\
-        "model-2",\
-        "model-3"\
+        "firstmodel",\
+        "secondmodel",\
+        "thirdmodel"\
     ]\
 }
 ```
 
 An example with proper spacing for JSON is in the extras folder. Note that the last model does not have a comma after the quote. I try to add them alphabetically.
-
-
 
 # how to change download quality:
 By default the recording is done at 480p and as an MP4. You can view videos as they're downloading by just opening the MP4! The resolution is determined by a line in the /rbs-config directory called bot.py that looks like this:
