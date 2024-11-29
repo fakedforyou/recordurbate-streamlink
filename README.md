@@ -76,8 +76,24 @@ Modify the file so that it is similar to this using the model names:
 
 An example with proper spacing for JSON is in the extras folder. Note that the last model does not have a comma after the quote. I try to add them alphabetically.
 
+
+
 # how to change download quality:
-coming soon!
+By default the recording is done at 480p and as an MP4. You can view videos as they're downloading by just opening the MP4! The resolution is determined by a line in the /rbs-config directory called bot.py that looks like this:
+```
+"480p,720p,best",
+```
+
+To change the resolution just modify this like to something else. Some examples are:
+```
+"1080p,720p,best",
+or
+"720p,480p,best", I use this one
+or
+"best,720p,480p",
+or something else
+```
+There is a sample in the extras folder. Changing this does require a restart of the container for the changes to take effect.
 
 # general usage suggestions:
 coming soon!
