@@ -54,6 +54,8 @@ modify the file so that it is similar to this using the model names:
 
 *********************
 
+An example with proper spacing for JSON is in the extras folder.
+
 # how to change download quality:
 
 
