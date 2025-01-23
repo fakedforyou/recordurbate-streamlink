@@ -1,3 +1,7 @@
+# UPDATES:
+* 2025-01-23 Modified the Dockerfile to include a CHMOD statement. This worked fine without it on one of my systems but when trialing it on another I had the issue that this fixed. Hopefully it fixes it for you too
+
+  
 # recordurbate-streamlink with docker introduction:
 Files and instructions to build a recordurbate-streamlink image used to deploy it in docker
 
