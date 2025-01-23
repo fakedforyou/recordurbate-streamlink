@@ -7,4 +7,5 @@ COPY files/recordurbate-streamlink source/
 COPY files/rbs-start.sh /
 COPY files/recordurbate-streamlink/chaturbate.py /root/.local/share/streamlink/plugins/
 VOLUME /recordurbate-streamlink /recordurbate-streamlink/videos
+RUN chmod +x /rbs-start.sh
 CMD ["/rbs-start.sh"]
