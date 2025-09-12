@@ -58,7 +58,13 @@ docker run -d \
 recordurbate-streamlink:latest
 ```
 If you want to modify the flow of traffic for this with your firewall based on IP then do the following:
-* use docker to make a macvlan using your home network space (this is on you as to how you configure it). In the example startup command below home_net is used for the name assuming that was the name used when the macvlan was created
+* use docker to make a macvlan using your home network space. In the example startup command below home_net is used for the name assuming that was the name used when the macvlan was created. Here is an example of how to do that (eno1 is the name of the network adapter):
+```
+docker network create -d macvlan \
+	--subnet=192.168.1.0/24 \
+	--gateway=192.168.1.1 \
+	-o parent=eno1 home_net
+```
 * Assign an IP to your container. In this example 192.168.1.99 is used
 * Once this is done you can use FW rules to route the recordurbate-streamlink container over your VPN or to rate limit it or whatever
 Here is a sample of the new start script with a specified IP
