@@ -40,7 +40,7 @@ class Chaturbate(Plugin):
             "csrftoken": CSRFToken,
         }
 
-        post_data = "room={0}&bandwidth=high".format(username)
+        post_data = "room_slug={0}&bandwidth=high".format(username)
 
         res = self.session.http.post(API_HLS, headers=headers, cookies=cookies, data=post_data)
         data = self.session.http.json(res, schema=_post_schema)
