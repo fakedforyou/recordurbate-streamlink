@@ -11,8 +11,8 @@ _url_re = re.compile(r"https?://(\w+\.)?chaturbate\.com/(?P<username>\w+)")
 
 _post_schema = validate.Schema(
     {
-        "url": validate.text,
-        "room_status": validate.text,
+        "url": validate.Schema(str),
+        "room_status": validate.Schema(str),
         "success": int
     }
 )
