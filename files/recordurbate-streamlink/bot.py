@@ -122,7 +122,7 @@ class Bot:
                         date = now.strftime("%Y-%m-%d_%H-%M-%S")
                         args = ["streamlink",  # streamlink bin
                                 "https://chaturbate.com/{}/".format(streamer[0]),  # chaturbate url
-                                "480p,720p,best",
+                                "720p,480p,best",
                                 "-o",
                                 "videos/{}/{}_{}.mp4".format(streamer[0], streamer[0], date)]
                         # append idx and process to processes list
