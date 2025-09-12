@@ -1,4 +1,5 @@
 # UPDATES:
+* 2025-09-12 Modified chaturbate.py to reflect room_slug and not room for the variable. Also modified to update 'stuff'.txt to 'stuff'.Schema(str) in 2 places near the top. Modified bot.py line to 720p,480p,best instead of 480p,720p,best and so it now defaults to 720p.
 * 2025-03-13 Modified chaturbate.py to reflect variable changes
 * 2025-01-23 Modified the Dockerfile to include a CHMOD statement. This worked fine without it on one of my systems but when trialing it on another I had the issue that this fixed. Hopefully it fixes it for you too
 * 2025-01-23 Updated the docker run command to include access to time and timezone so downloaded files match your system time.
