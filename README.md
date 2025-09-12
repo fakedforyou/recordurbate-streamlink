@@ -57,6 +57,24 @@ docker run -d \
   -v /etc/localtime:/etc/localtime \
 recordurbate-streamlink:latest
 ```
+If you want to modify the flow of traffic for this with your firewall based on IP then do the following:
+* use docker to make a macvlan using your home network space (this is on you as to how you configure it). In the example startup command below home_net is used for the name assuming that was the name used when the macvlan was created
+* Assign an IP to your container. In this example 192.168.1.99 is used
+* Once this is done you can use FW rules to route the recordurbate-streamlink container over your VPN or to rate limit it or whatever
+Here is a sample of the new start script with a specified IP
+```
+docker run --net=home_net --ip=192.168.1.99 \
+  -d \
+  --restart unless-stopped \
+  --name recordurbate-streamlink \
+  -e PGID=0 -e PUID=0 \
+  -e UMASK_SET=000 \
+  -v /rbs-config:/recordurbate-streamlink \
+  -v /rbs-videos:/recordurbate-streamlink/videos \
+  -v /etc/timezone:/etc/timezone \
+  -v /etc/localtime:/etc/localtime \
+recordurbate-streamlink:latest
+```
 
 # how to add or remove models:
 Models are identified in the config.json file within the configs directory in your /rbs-config directory. To add or remove models it is easiest to just modify the JSON file. You can also add models by attaching to the container and running the familiar recordurbate add command. But the file is faster and actually easier as long as you maintain the spacing and syntax. This file is periodically read and so there is no need to restart the container for the changes to take effect. 
