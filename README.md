@@ -117,6 +117,7 @@ run
 docker exec -it recordurbate-streamlink python3 /recordurbate-streamlink/Recordurbate.py
 ```
 you have options to use:
+```
 Usage: Recordurbate [add | del] username
        Recordurbate [start | stop | restart]
        Recordurbate list
@@ -124,7 +125,7 @@ Usage: Recordurbate [add | del] username
        Recordurbate export [file location]
 
        Recordurbate help
-
+```
 so to get a list of all models you have added:
 ```
 docker exec -it recordurbate-streamlink python3 /recordurbate-streamlink/Recordurbate.py list
