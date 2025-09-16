@@ -111,6 +111,30 @@ Modify the file so that it is similar to this using the model names:
 
 An example with proper spacing for JSON is in the extras folder. Note that the last model does not have a comma after the quote. I try to add them alphabetically.
 
+To do it with commands:
+run 
+```
+docker exec -it recordurbate-streamlink python3 /recordurbate-streamlink/Recordurbate.py
+```
+you have options to use:
+Usage: Recordurbate [add | del] username
+       Recordurbate [start | stop | restart]
+       Recordurbate list
+       Recordurbate import list.txt
+       Recordurbate export [file location]
+
+       Recordurbate help
+
+so to get a list of all models you have added:
+```
+docker exec -it recordurbate-streamlink python3 /recordurbate-streamlink/Recordurbate.py list
+```
+to add a model
+```
+docker exec -it recordurbate-streamlink python3 /recordurbate-streamlink/Recordurbate.py add modelname
+```
+etc...
+
 # how to change download resolution:
 By default the recording is done at 480p and as an MP4. You can view videos as they're downloading by just opening the MP4! The resolution is determined by a line in the /rbs-config directory called bot.py that looks like this:
 ```
